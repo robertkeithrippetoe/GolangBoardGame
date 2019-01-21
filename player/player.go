@@ -6,7 +6,7 @@ import (
 
 type Player struct {
 	Name string
-	Team []character.Character
+	Team [1]character.Character
 }
 
 func GeneratePlayer() {

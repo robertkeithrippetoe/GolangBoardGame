@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 
 	"github.com/GolangBoardGame/character"
 	"github.com/GolangBoardGame/player"
@@ -30,14 +31,32 @@ func main() {
 	roster[4] = character5
 	character.PrintCharacter(character5)
 
+	fmt.Println("Pick your characters!")
+
 	//character.PrintCharacter(character5)
-	for i := 0; i < 5; i++ {
-		fmt.Println(i)
+	for i := 0; i < len(roster); i++ {
+		fmt.Print(i + 1)
+		fmt.Print(". ")
 		character.PrintCharacter(roster[i])
 	}
 	fmt.Println(player1.Name + " which character do you choose?")
 	var reply string
 	fmt.Scanln(&reply)
+	replyInt, _ := strconv.ParseInt(reply, 10, 64)
+	player1.Team[0] = roster[replyInt]
+	/*
+		for i := 0; i < len(roster); i++ {
+			fmt.Print(i + 1)
+			fmt.Print(". ")
+			character.PrintCharacter(roster[i])
+		}
+
+		fmt.Println(player2.Name + " which character do you choose?")
+		fmt.Scanln(&reply)
+		replyInt, _ = strconv.ParseInt(reply, 10, 64)
+		player2.Team[0] = roster[replyInt]
+	*/
+
 	//character1 = draft.GenerateCharacter
 	//fmt.Println("Say hi to " + character1.name)
 	/*
