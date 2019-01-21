@@ -2,6 +2,7 @@ package draft
 
 import (
 	"math/rand"
+	"time"
 )
 
 type Character struct {
@@ -13,6 +14,7 @@ type Character struct {
 }
 
 func GenerateCharacter() Character {
+	rand.Seed(time.Now().UnixNano())
 	var character Character
 	var firstName string
 	var lastName string

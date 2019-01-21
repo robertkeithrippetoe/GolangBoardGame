@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 
 	draft "github.com/GolangBoardGame/Draft"
 )
@@ -9,8 +10,9 @@ import (
 func main() {
 	fmt.Println("Now Booting Game")
 	character1 := draft.GenerateCharacter()
-	fmt.Println("My name is " + character1.Name + "!")
-
+	fmt.Println("My name is " + character1.Name + "! My stats are: " + strconv.Itoa(character1.Endurance) + strconv.Itoa(character1.Health) + strconv.Itoa(character1.Speed) + strconv.Itoa(character1.Strength))
+	character2 := draft.GenerateCharacter()
+	fmt.Println("My name is " + character2.Name + "! My stats are: " + strconv.Itoa(character2.Endurance) + strconv.Itoa(character2.Health) + strconv.Itoa(character2.Speed) + strconv.Itoa(character2.Strength))
 	//character1 = draft.GenerateCharacter
 	//fmt.Println("Say hi to " + character1.name)
 	/*
