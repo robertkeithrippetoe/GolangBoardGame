@@ -13,6 +13,7 @@ type Character struct {
 	Strength  int
 	Health    int
 	Endurance int
+	ID        int
 }
 
 func GenerateCharacter() Character {
