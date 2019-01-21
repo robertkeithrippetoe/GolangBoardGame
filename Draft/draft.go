@@ -17,13 +17,13 @@ func GenerateCharacter() Character {
 	var firstName string
 	var lastName string
 	r := rand.Intn(10) + 1
-	character.speed = r
+	character.Speed = r
 	r = rand.Intn(10) + 1
-	character.strength = r
+	character.Strength = r
 	r = rand.Intn(10) + 1
-	character.health = r
+	character.Health = r
 	r = rand.Intn(10) + 1
-	character.endurance = r
+	character.Endurance = r
 	r = rand.Intn(5) + 1
 	switch r {
 	case 1:
@@ -50,6 +50,6 @@ func GenerateCharacter() Character {
 	case 5:
 		lastName = "Jistastimbolt"
 	}
-	character.name = firstName + " " + lastName
+	character.Name = firstName + " " + lastName
 	return character
 }
