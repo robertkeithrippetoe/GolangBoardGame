@@ -12,7 +12,7 @@ type Character struct {
 	endurance int
 }
 
-func generateCharacter() Character {
+func GenerateCharacter() Character {
 	var character Character
 	var firstName string
 	var lastName string
