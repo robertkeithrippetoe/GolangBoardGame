@@ -5,7 +5,8 @@ import (
 )
 
 func main() {
-	fmt.Println("What is your name?")
+	fmt.Println("Now Booting Game")
+	/*fmt.Println("What is your name?")
 	var text string
 	fmt.Scanln(&text)
 	switch text {
@@ -16,4 +17,5 @@ func main() {
 	default:
 		fmt.Println("I don't care.")
 	}
+	*/
 }
