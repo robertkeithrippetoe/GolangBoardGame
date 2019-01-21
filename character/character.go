@@ -1,7 +1,9 @@
 package character
 
 import (
+	"fmt"
 	"math/rand"
+	"strconv"
 	"time"
 )
 
@@ -54,4 +56,8 @@ func GenerateCharacter() Character {
 	}
 	character.Name = firstName + " " + lastName
 	return character
+}
+
+func PrintCharacter(character Character) {
+	fmt.Println("My name is " + character.Name + "! My stats are: Endurance: " + strconv.Itoa(character.Endurance) + " Health: " + strconv.Itoa(character.Health) + " Speed: " + strconv.Itoa(character.Speed) + " Strength " + strconv.Itoa(character.Strength))
 }
