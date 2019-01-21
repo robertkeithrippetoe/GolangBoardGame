@@ -4,14 +4,14 @@ import (
 	"fmt"
 	"strconv"
 
-	draft "github.com/GolangBoardGame/Draft"
+	"github.com/GolangBoardGame/character"
 )
 
 func main() {
 	fmt.Println("Now Booting Game")
-	character1 := draft.GenerateCharacter()
+	character1 := character.GenerateCharacter()
 	fmt.Println("My name is " + character1.Name + "! My stats are: Endurance: " + strconv.Itoa(character1.Endurance) + " Health: " + strconv.Itoa(character1.Health) + " Speed: " + strconv.Itoa(character1.Speed) + " Strength " + strconv.Itoa(character1.Strength))
-	character2 := draft.GenerateCharacter()
+	character2 := character.GenerateCharacter()
 	fmt.Println("My name is " + character2.Name + "! My stats are: Endurance: " + strconv.Itoa(character2.Endurance) + " Health: " + strconv.Itoa(character2.Health) + " Speed: " + strconv.Itoa(character2.Speed) + " Strength " + strconv.Itoa(character2.Strength))
 	//character1 = draft.GenerateCharacter
 	//fmt.Println("Say hi to " + character1.name)
