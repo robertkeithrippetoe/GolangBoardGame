@@ -2,12 +2,14 @@ package main
 
 import (
 	"fmt"
-	//draft "github.com/GolangBoardGame/Draft"
+
+	draft "github.com/GolangBoardGame/Draft"
 )
 
 func main() {
 	fmt.Println("Now Booting Game")
-	//var character1 draft.Character
+	character1 := draft.GenerateCharacter()
+	fmt.Println("My name is " + character1.Name + "!")
 
 	//character1 = draft.GenerateCharacter
 	//fmt.Println("Say hi to " + character1.name)

@@ -5,11 +5,11 @@ import (
 )
 
 type Character struct {
-	name      string
-	speed     int
-	strength  int
-	health    int
-	endurance int
+	Name      string
+	Speed     int
+	Strength  int
+	Health    int
+	Endurance int
 }
 
 func GenerateCharacter() Character {
