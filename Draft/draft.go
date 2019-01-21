@@ -50,6 +50,6 @@ func generateCharacter() Character {
 	case 5:
 		lastName = "Jistastimbolt"
 	}
-	character.name = firstName + lastName
+	character.name = firstName + " " + lastName
 	return character
 }
