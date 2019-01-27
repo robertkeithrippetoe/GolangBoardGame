@@ -32,11 +32,13 @@ func main() {
 		fmt.Print(". ")
 		character.PrintCharacter(roster[i])
 	}
+
 	fmt.Println(player1.Name + " which character do you choose?")
 	var reply string
 	fmt.Scanln(&reply)
 	replyInt, _ := strconv.ParseInt(reply, 10, 64)
-	player1.Team[0] = roster[replyInt]
+	player1.Team = append(player1.Team, roster[replyInt-1])
+	character.PrintCharacter(player1.Team[0])
 	/*
 		for i := 0; i < len(roster); i++ {
 			fmt.Print(i + 1)
