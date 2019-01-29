@@ -20,10 +20,14 @@ func main() {
 		time.Sleep(5) // Ensures characters don't get repeated if they are generated too fast
 	}
 
+	numPlayers := 2
+	playerArray := make([]player.Player, numPlayers)
 	var player1 player.Player
 	player1.Name = "player1"
+	playerArray[0] = player1
 	var player2 player.Player
 	player2.Name = "player2"
+	playerArray[0] = player2
 
 	fmt.Println("Pick your characters!")
 
