@@ -27,7 +27,7 @@ func main() {
 	playerArray[0] = player1
 	var player2 player.Player
 	player2.Name = "player2"
-	playerArray[0] = player2
+	playerArray[1] = player2
 
 	fmt.Println("Pick your characters!")
 
@@ -56,7 +56,9 @@ func main() {
 	replyInt, _ = strconv.ParseInt(reply, 10, 64)
 	player2.Team = append(player2.Team, roster[replyInt-1])
 	character.PrintCharacter(player2.Team[0])
-
+	playerArray[0] = player1
+	playerArray[1] = player2
+	player.AllPrint(playerArray)
 	/*
 		for i := 0; i < len(roster); i++ {
 			fmt.Print(i + 1)
